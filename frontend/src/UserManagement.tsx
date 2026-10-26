@@ -118,7 +118,7 @@ export default function UserManagement({ isOwner }: { isOwner: boolean }) {
         <form className="user-create-form" onSubmit={submit}>
           <label>Логин<input value={login} onChange={e => setLogin(e.target.value)} minLength={3} maxLength={32} pattern="[A-Za-z0-9_.-]+" required /></label>
           <label>Роль<select value={role} onChange={e => setRole(e.target.value)}><option value="VIEWER">VIEWER — просмотр</option><option value="TRADER">TRADER — PAPER</option>{isOwner && <option value="ADMIN">ADMIN — управление</option>}</select></label>
-          <label>Торговый доступ<select value={access} onChange={e => setAccess(e.target.value)}><option value="read">read — только чтение</option><option value="paper">paper — PAPER операции</option><option value="disabled">disabled — без торговых данных</option>}</select></label>
+          <label>Торговый доступ<select value={access} onChange={e => setAccess(e.target.value)}><option value="read">read — только чтение</option><option value="paper">paper — PAPER операции</option><option value="disabled">disabled — без торговых данных</option></select></label>
           <label>Срок действия<select value={expiration} onChange={e => setExpiration(e.target.value)}><option value="never">Бессрочно</option><option value="7_days">7 дней</option><option value="30_days">30 дней</option><option value="90_days">90 дней</option></select></label>
           <div className="permission-preview">
             <b>Предпросмотр доступа</b>
